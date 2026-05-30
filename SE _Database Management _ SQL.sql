@@ -67,7 +67,7 @@ FROM Nobel_win
 WHERE YEAR = 1970
 ORDER BY
 CASE
-    WHEN SUBJECT IN ('Chemistry', 'Economics') THEN 1
+    WHEN SUBJECT='Chemistry' or SUBJECT='Economics' THEN 1
     ELSE 0
 END,
 SUBJECT ASC;
